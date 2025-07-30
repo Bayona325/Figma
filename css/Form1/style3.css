@@ -1,8 +1,8 @@
 :root {
     --text-color: #303030;
-    --text-color-light: #FFFFFF;
-    --background-color: #828282;
-    --background-color-dark: #3b6540;
+    --text-color-light: #7e7e7e;
+    --background-color: white;
+    --background-color-dark: #000000;
     --background-color-yellow: #FFDD81;
     --background-color-light: #47787a;
     --border-color: #D5D5D5;
@@ -22,4 +22,58 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.text-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.text-content p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: var(--text-color-light);
+}
+
+.explore-btn {
+    background-color: var(--background-color-dark);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #505050;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
 }
