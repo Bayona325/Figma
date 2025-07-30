@@ -1,13 +1,10 @@
 :root {
-    --text-color: #303030;
-    --text-color-light: #7e7e7e;
-    --text-color-light2: #686868;
+    --text-color: #252525;
+    --text-color-gray1: #252525b4;
+    --text-color-gray2: #2525258b;
+    --text-color-light: #FFFFFF;
     --background-color: #ffffff;
-    --background-color-dark: #3b6540;
-    --background-color-yellow: #FFDD81;
-    --background-color-light: #47787a;
-    --border-color: #D5D5D5;
-    --border-color-dark: #303030;
+    --background-color-dark: #252525;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Work Sans', sans-serif;
 }
@@ -31,6 +28,9 @@ body {
 }
 
 .text-content h1 {
+    color: var(--text-color);
+    font-size: 88px;
+    line-height: 6rem;
     margin-top: 25px;
     font-size: 74px;
 }
@@ -42,19 +42,19 @@ body {
 }
 
 .title {
-    color: var(--text-color-light);
+    color: var(--text-color-gray2);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     font-size: 30px;
-    gap: 35px;
+    gap: -35px;
 }
 
 .text {
-    color: var(--text-color-light2);
+    color: var(--text-color-gray1);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     font-size: 25px;
-    gap: 35px;
+    gap: -35px;
 }
 
 .text > div{
@@ -64,7 +64,7 @@ body {
 .grid-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
+    gap: -35px;
 }
 
 .grid-row img {
