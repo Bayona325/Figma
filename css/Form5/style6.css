@@ -19,6 +19,9 @@
 body {
     font-family: var(--font-body);
     background-image: url('../Form5/src6/img/Frame1/Fondo.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     color: var(--text-color);
     line-height: 1.6;
 }
