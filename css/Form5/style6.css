@@ -1,12 +1,11 @@
 :root {
-    --text-color: #303030;
+    --text-color: #252525;
+    --text-color-gray1: #252525b4;
+    --text-color-gray2: #2525258b;
     --text-color-light: #FFFFFF;
-    --background-color: #828282;
-    --background-color-dark: #3b6540;
-    --background-color-yellow: #FFDD81;
-    --background-color-light: #47787a;
-    --border-color: #D5D5D5;
-    --border-color-dark: #303030;
+    --background-color: #FFFFFF;
+    --background-color-dark: #06040A;
+    --background-color-light: #767676;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Work Sans', sans-serif;
 }
@@ -22,4 +21,45 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text-content {
+    padding: 10%;
+}
+
+.text-content h1 {
+    font-size: 65px;
+    line-height: 5.5rem;
+}
+
+.text-content p {
+    margin-top: 15px;
+}
+
+.text-content button {
+    margin-top: 20px;
+}
+
+.explore-btn {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+    padding: 15px 30px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: var(--background-color-light);
+    color: var(--text-color);
 }
