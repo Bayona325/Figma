@@ -12,6 +12,7 @@
     --border-color: #050505;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Work Sans', sans-serif;
+    --translate: translate(-46%, -50%);
 }
 
 * {
@@ -29,7 +30,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
     padding: 5%;
 }
 
@@ -53,26 +54,28 @@ body {
 
 .image-container {
     position: relative;
-    display: inline-block;
-    width: 500px;
-    height: 500px;
-    padding-left: 15%;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 0; /* Eliminamos el padding que desplazaba todo */
 }
 
 .stroke {
     width: 670px;
     height: 850px;
     z-index: 1;
+    position: relative;
 }
 
 .imagen {
     position: absolute;
-    width: 500px;
-    height: 658px;
+    width: 520px;
+    height: 700px;
     top: 50%;
     left: 50%;
-    transform: translate(3%, -25%);
+    transform: var(--translate);
     z-index: 2;
     border-radius: 52px;
 }
@@ -114,14 +117,14 @@ body {
     color: var(--text-color-light);
 }
 
-/* ====== Por Revisar ====== */
-
 .tag {
     background-color: var(--background-color-content);
+    color: var(--text-color-light);
+    font-family: var(--font-body);
     display: block;
     border: none;
-    border-radius: 30px;
-    padding: 10px 30px;
+    border-radius: 16px;
+    padding: 15px 50px;
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -131,41 +134,56 @@ body {
     z-index: 3;
 }
 
-.top-right {
-    top: 50px;
-    right: -30px;
-}
-
-.bottom-left {
-    bottom: 20px;
-    left: -50px;
-}
-
-.bottom-center {
-    bottom: 100px;
-    left: 20%;
-}
-
 .floating-icon {
     position: absolute;
-    z-index: 6;
+    z-index: 4;
     width: 75px;
     height: auto;
 }
 
 .top-left-start {
-    top: 50px;
-    left: 30px;
+    top: 76%;
+    left: 77%;
+    transform: var(--translate);
+    width: 130px;
+    height: 170px;
 }
 
 .bottom-right {
-    bottom: 20px;
-    right: 20px;
-    width: 95px;
+    bottom: 80%;
+    right: 78%;
+    transform: var(--translate);
+    width: 135.85px;
+    height: 135.85px;
 }
 
 .top-left {
-    top: -65px;
-    left: -85px;
-    width: 130px;
+    bottom: 63%;
+    left: 25%;
+    transform: var(--translate);
+}
+
+/* Ajustar las etiquetas flotantes */
+.top-right {
+    margin-top: 120px;
+    font-size: 18px;
+    top: 8%;
+    right: -18%; /* Ajustado para que no se salga */
+    transform: var(--translate);
+}
+
+.bottom-left {
+    font-size: 24px;
+    bottom: 10%;  /* Aumenta este valor para subir más el elemento */
+    left: 16%;     /* Ajusta este valor si necesitas moverlo horizontalmente */
+    transform: var(--translate);
+}
+
+.hero-cuadro {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 7rem;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 5%;
 }
