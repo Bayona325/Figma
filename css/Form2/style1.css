@@ -1,12 +1,10 @@
 :root {
-    --text-color: #303030;
+    --text-color: #252525;
     --text-color-light: #FFFFFF;
-    --background-color: #828282;
-    --background-color-dark: #3b6540;
-    --background-color-yellow: #FFDD81;
-    --background-color-light: #47787a;
+    --background-color: #FFFFFF;
+    --background-color-dark: #000000;
     --border-color: #D5D5D5;
-    --border-color-dark: #303030;
+    --border-color-dark: #000000;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Work Sans', sans-serif;
 }
@@ -22,4 +20,55 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+}
+
+.container {
+    padding: 4%;
+    padding-top: 7%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.text {
+    color: var(--text-color);
+}
+
+.text h1 {
+    font-size: 72px;
+    line-height: 6rem;
+}
+
+.text p {
+    margin-top: 2.5rem;
+    font-size: 26px;
+    line-height: normal;
+    opacity: 0.8;
+}
+
+.explore-button {
+    margin-top: 2.4rem;
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+    border: none;
+    border-radius: 36px;
+    padding: 18px 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.explore-button:hover {
+    opacity: 0.85;
+}
+
+.cuadro {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 4%;
+    background-color: var(--background-color-dark);
+    border: none;
+    color: var(--text-color-light);
+}
+
+.card img {
+    opacity: 0.7;
 }
