@@ -30,8 +30,9 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% 50%;
     padding: 5%;
+    padding-left: 7%;
 }
 
 .hero-text {
@@ -174,7 +175,7 @@ body {
 
 .bottom-left {
     font-size: 24px;
-    bottom: 10%;  /* Aumenta este valor para subir más el elemento */
+    bottom: 7%;  /* Aumenta este valor para subir más el elemento */
     left: 16%;     /* Ajusta este valor si necesitas moverlo horizontalmente */
     transform: var(--translate);
 }
@@ -182,8 +183,26 @@ body {
 .hero-cuadro {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin-top: 7rem;
+    margin-top: 13%;
+    margin-left: -3.5%;
     border: 1px solid var(--border-color);
     border-radius: 24px;
     padding: 5%;
+    gap: 1rem;
+    width: fit-content;
+    width: 95%; /* o un valor fijo como `800px` */
+    margin-left: 0; /* Evita desplazamientos no deseados */
+}
+
+.card {
+    line-height: normal;
+}
+
+.card img {
+    font-size: 24px;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 5%;
 }
