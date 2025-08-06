@@ -1,0 +1,73 @@
+:root {
+    --text-color: #252525;
+    --text-color-gray1: #252525b4;
+    --text-color-gray2: #2525258b;
+    --text-color-light: #FFFFFF;
+    --background-color: #ffffff;
+    --background-color-dark: #252525;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Work Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    padding: 1%;
+    padding-left: 4%;
+}
+
+.text-content h1 {
+    color: var(--text-color);
+    font-size: 88px;
+    line-height: 6rem;
+    margin-top: 25px;
+    font-size: 74px;
+}
+
+.tables {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.title {
+    color: var(--text-color-gray2);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 30px;
+    gap: -35px;
+}
+
+.text {
+    color: var(--text-color-gray1);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 25px;
+    gap: -35px;
+}
+
+.text > div{
+    margin-bottom: 25px;
+}
+
+.grid-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: -35px;
+}
+
+.grid-row img {
+    width: auto;
+    height: auto;
+}

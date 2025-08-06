@@ -1,0 +1,90 @@
+:root {
+    --text-color: #232323;
+    --text-color-light: #FFFFFF;
+    --background-color: #333333;
+    --background-color-white: #FFFFFF;
+    --text-title1: #6BDFDA;
+    --text-title2: #9AD7F3;
+    --text-title3: #FEC3C7;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Work Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color-light);
+    line-height: 1.6;
+}
+
+.container {
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.text-content {
+    padding: 6rem;
+}
+
+.text-content h1 {
+    font-size: 72px;
+    line-height: 6rem;
+}
+
+.color1 {
+    color: var(--text-title1);
+}
+
+.color2 {
+    color: var(--text-title2);
+}
+
+.color3 {
+    color: var(--text-title3);
+}
+
+.text-content p {
+    font-size: 24px;
+    margin-top: 2rem;
+}
+
+.imagens {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.tower {
+    display: flex;
+    flex-direction: column;
+}
+
+.tower img {
+    border-radius: 40px;
+    padding: 5px 10px;
+    width: auto;
+    height: auto;
+}
+
+.explore-btn {
+    margin-top: 1.3rem;
+    background-color: var(--background-color-white);
+    color: var(--text-color);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 36px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+}

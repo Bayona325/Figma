@@ -1,0 +1,137 @@
+:root {
+    --text-color: #303030;
+    --text-color-light: #7e7e7e;
+    --background-color: white;
+    --background-color-dark: #000000;
+    --background-color-yellow: #FFDD81;
+    --background-color-light: #47787a;
+    --border-color: #D5D5D5;
+    --border-color-dark: #303030;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Work Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 10vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0px;
+    gap: 40px;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.text-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 2.2rem;
+    line-height: 4rem;
+}
+
+.text-content p {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.explore-btn {
+    background-color: var(--background-color-dark);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.explore-btn:hover {
+    opacity: 0.8;
+}
+
+.image-grid {
+    border-radius: 16px;
+    width: 408px;
+    height: 480px;
+}
+
+.image-grid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 480px;
+    width: 408px;
+    gap: 10px;
+}
+
+.grid-row {
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    gap: 30px;
+}
+
+.grid-row img {
+    position: absolute;
+    border-radius: 16px;
+    width: 50%; /* Ajusta según necesidad */
+    height: auto;
+    max-width: 412px;
+    max-height: 379px;
+}
+
+.grid-row img:first-child {
+    top: 0;
+    left: -30px;
+}
+
+.grid-row img:last-child {
+    bottom: 0;
+    right: 0;
+}
+
+img{
+    border-radius: 16px;
+    width: 380;
+    height: 360px;
+}
+
+.image-grid2 {
+    display: flex;
+    flex-direction: column;
+    gap: -50px;
+}
+
+.text {
+    color: var(--text-color-light);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 30px;
+    gap: 35px;
+}
+
+.grid-row2 {
+    display: flex;
+    gap: 40px;
+}

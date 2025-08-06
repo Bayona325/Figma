@@ -1,0 +1,84 @@
+:root {
+    --text-color: #252525;
+    --text-color-gray1: #252525b4;
+    --text-color-gray2: #25252583;
+    --text-color-light: #FFFFFF;
+    --background-color: #ffffff;
+    --background-color-dark: #252525;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Work Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+    padding: 3%;
+}
+
+.conteiner {
+    display: flex;
+}
+
+.text-content {
+    margin-top: -5rem;
+    margin-left: 6rem;
+}
+
+.text-content h1 {
+    font-size: 64px;
+    line-height: 5rem;
+    color: var(--text-color);
+}
+
+.text-content p {
+    margin-top: 2rem;
+    font-size: 24px;
+    color: var(--text-color-gray1);
+}
+
+.explore-btn {
+    margin-top: 1.5rem;
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+    border: none;
+    padding: 14px 40px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 0.3;
+}
+
+.explore-btn {
+    background-color: var(--background-color-dark);
+}
+
+.parra {
+    margin-top: 6rem;
+    margin-left: 6rem;
+}
+
+.text-content2 {
+    margin-top: 2rem;
+}
+
+.text-content2 h1 {
+    font-size: 32px;
+    color: var(--text-color-gray2);
+}
+
+.text-content2 p {
+    font-size: 24px;
+    color: var(--text-color-gray1);
+}

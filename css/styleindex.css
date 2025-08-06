@@ -1,0 +1,101 @@
+:root {
+    --text-color: #303030;
+    --text-color-light: #FFFFFF;
+    --background-color: #D5D5D5;
+    --background-color-dark: #3b6540;
+    --background-color-yellow: #FFDD81;
+    --background-color-light: #47787a;
+    --border-color: #D5D5D5;
+    --border-color-dark: #303030;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Work Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+} 
+
+h1 h2 h3 {
+    margin-top: 20px;
+    text-align: center;
+    width: auto;
+    height: 80px;
+    white-space: nowrap;
+    font-family: var(--text-color);
+    font-weight: 400;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.disens {
+    width: 100%;
+}
+
+.disens ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+.disens ul li {
+    flex: 1;
+    min-width: 140px;
+    max-width: 200px;
+}
+
+.disens ul li a {
+    display: block;
+    padding: 15px 20px;
+    background-color: var(--background-color-light);
+    border: 1px solid var(--border-color-dark);
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.disens ul li a:hover {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+}
+
+.disens ul:nth-child(even) li a {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+}
+
+.disens ul li a:hover {
+    opacity: 0.5;
+}

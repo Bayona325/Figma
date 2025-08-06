@@ -1,0 +1,55 @@
+:root {
+    --text-color: #303030;
+    --text-color-light: #FFFFFF;
+    --background-color: #AB2706;
+    --background-color-dark: #3b6540;
+    --background-color-yellow: #E5B94B;
+    --background-color-light: #47787a;
+    --border-color: #D5D5D5;
+    --border-color-dark: #303030;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Work Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color-light);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    padding: 5%;
+}
+
+.text-content h1 {
+    font-size: 104px;
+    line-height: 8rem;
+    font-family: var(--font-body);
+}
+
+.text-content p {
+    margin-top: 3rem;
+    font-size: 32px;
+    font-family: var(--font-body);
+}
+
+.explore-btn {
+    background-color: var(--background-color-yellow);
+    color: var(--text-color);
+    border: none;
+    padding: 20px 50px;
+    font-size: 1.7rem;
+    border-radius: 36px;
+    margin-top: 3rem;
+    cursor: pointer;
+    transition: 0.3s;
+}

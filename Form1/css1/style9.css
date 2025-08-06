@@ -1,0 +1,23 @@
+:root {
+    --text-color: #252525;
+    --text-color-gray1: #252525b4;
+    --text-color-gray2: #2525258b;
+    --text-color-light: #FFFFFF;
+    --background-color: #ffffff;
+    --background-color-dark: #252525;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Work Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}

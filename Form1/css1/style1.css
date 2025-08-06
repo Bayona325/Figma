@@ -1,0 +1,81 @@
+:root {
+    --text-color: #303030;
+    --text-color-light: #FFFFFF;
+    --background-color: white;
+    --background-color-dark: #000000;
+    --background-color-yellow: #FFDD81;
+    --background-color-light: #47787a;
+    --border-color: #D5D5D5;
+    --border-color-dark: #303030;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Work Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    gap: 40px;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.text-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.text-content p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.explore-btn {
+    background-color: var(--background-color-dark);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.explore-btn:hover {
+    opacity: 0.8;
+}
+
+.image-grid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.grid-row {
+    display: flex;
+    gap: 10px;
+}
