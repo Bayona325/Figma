@@ -1,10 +1,10 @@
 :root {
-    --text-color: #303030;
+    --text-color: #252525;
     --text-color-light: #FFFFFF;
     --background-color: #828282;
-    --background-color-dark: #3b6540;
+    --background-color-dark: #252525;
     --background-color-yellow: #FFDD81;
-    --background-color-light: #47787a;
+    --background-color-light: WHITE;
     --border-color: #D5D5D5;
     --border-color-dark: #303030;
     --font-heading: 'Playfair Display', serif;
@@ -19,7 +19,96 @@
 
 body {
     font-family: var(--font-body);
-    background-color: var(--background-color);
+    background-color: var(--background-color-light);
     color: var(--text-color);
     line-height: 1.6;
+}
+
+/* Additional styles specific to this layout */
+.container {
+    padding: 5%;
+    padding-top: 8%;
+}
+
+.container h1 {
+    color: var(--text-color);
+    font-size: 72px;
+    line-height: 6rem;
+    padding-bottom: 2rem;
+}
+
+.container p {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 26px;
+    padding-bottom: 3rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    gap: 34%;
+}
+
+.derecha {
+    position: relative;
+    padding-top: 35%;
+    width: 323px;
+    height: 385px;
+    padding-bottom: 4%;
+}
+
+.derecha img {
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.derecha img:first-child {
+    width: 100%;
+    top: 25%;
+    left: 25%;
+    z-index: 2;
+}
+
+.derecha img:last-child {
+    width: 100%;
+    bottom: 35%;
+    right: 35%;
+    z-index: 1;
+}
+
+.explore-btn {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+    border: none;
+    padding: 18px 30px;
+    font-size: 1rem;
+    border-radius: 36px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.table {
+    width: 100%;
+    padding: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3%;
+    background-color: var(--background-color-dark);
+    border-radius: 40px;
+}
+
+.table h2 {
+    color: var(--text-color-light);
+    font-size: 32px;
+    opacity: 0.8;
+    padding-bottom: 1.5rem;
+}
+
+.table p {
+    color: var(--text-color-light);
+    font-size: 24px;
+    opacity: 0.8;
 }
