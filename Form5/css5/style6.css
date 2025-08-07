@@ -18,7 +18,7 @@
 
 body {
     font-family: var(--font-body);
-    background-image: url('src6/img/Frame1/Fondo.svg');
+    background-image: url('src/src6/img/Frame1/Fondo.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
