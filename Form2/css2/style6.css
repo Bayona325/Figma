@@ -46,20 +46,41 @@ body {
 
 .content {
     background-color: var(--background-color-transparent);
+    color: var(--text-color-light);
     opacity: 0.8;
     border-radius: 24px;
+    padding: 5%;
 }
 
 .explore-btn {
     background-color: var(--background-color-dark);
     color: var(--text-color);
-    padding: 20px 50px;
+    padding: 16px 50px;
     border-radius: 36px;
     border: none;
     text-decoration: none;
     font-size: 16px;
 }
 
+h1 {
+    font-size: 64px;
+    line-height: 1.2;
+    padding-bottom: 2.5rem;
+}
+
+.content p {
+    font-size: normal;
+    line-height: 1.2;
+    padding-bottom: 2rem;
+}
+
 .list {
-    background-image: url('src/src6/img/Frame1/list.svg');
+    background-color: var(--background-color-transparent);
+    opacity: 0.8;
+    border-radius: 32px;
+    color: var(--text-color-light);
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    padding: 3rem;
 }
