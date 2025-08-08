@@ -23,8 +23,7 @@ body {
 }
 
 .container {
-    padding: 1%;
-    padding-left: 4%;
+    padding: 4%;
 }
 
 .text-content h1 {
@@ -37,37 +36,31 @@ body {
 
 .tables {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5rem;
+    gap: 4rem;
+}
+
+.card {
+    display: flex;
     flex-direction: column;
-    margin-top: 50px;
 }
 
-.title {
+h2 {
     color: var(--text-color-gray2);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     font-size: 30px;
-    gap: -35px;
+    padding-bottom: 0.5rem;
 }
 
-.text {
+p {
     color: var(--text-color-gray1);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     font-size: 25px;
-    gap: -35px;
+    padding-bottom: 1.5rem;
 }
 
-.text > div{
-    margin-bottom: 25px;
-}
-
-.grid-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: -35px;
-}
-
-.grid-row img {
-    width: auto;
-    height: auto;
+img {
+    width: 400px;
+    height: 335px;
 }

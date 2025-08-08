@@ -1,10 +1,11 @@
 :root {
-    --text-color: #303030;
+    --text-color: #000000;
     --text-color-light: #FFFFFF;
     --background-color: #828282;
-    --background-color-dark: #3b6540;
+    --background-color-dark: #63E1E1;
     --background-color-yellow: #FFDD81;
-    --background-color-light: #47787a;
+    --background-color-light: #FFFFFF;
+    --background-color-transparent: transparent;
     --border-color: #D5D5D5;
     --border-color-dark: #303030;
     --font-heading: 'Playfair Display', serif;
@@ -19,7 +20,46 @@
 
 body {
     font-family: var(--font-body);
-    background-color: var(--background-color);
+    background-image: url('src/src6/img/Frame1/Fondo1.svg');
     color: var(--text-color);
     line-height: 1.6;
+}
+
+.blocks {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+
+.fond {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+
+.der {
+    position: fixed;
+    width: 1024px;
+    height: 1024px;
+    right: 0px;
+}
+
+.content {
+    background-color: var(--background-color-transparent);
+    opacity: 0.8;
+    border-radius: 24px;
+}
+
+.explore-btn {
+    background-color: var(--background-color-dark);
+    color: var(--text-color);
+    padding: 20px 50px;
+    border-radius: 36px;
+    border: none;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.list {
+    background-image: url('src/src6/img/Frame1/list.svg');
 }
