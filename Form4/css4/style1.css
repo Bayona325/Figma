@@ -1,14 +1,17 @@
 :root {
-    --text-color: #303030;
+    --text-color: #252525;
     --text-color-light: #FFFFFF;
-    --background-color: #828282;
-    --background-color-dark: #3b6540;
-    --background-color-yellow: #FFDD81;
-    --background-color-light: #47787a;
+    --background-color: #FFFFFF;
+    --background-color-dark: #252525;
+    --background-color-brow: #363032;
+    --background-color-brow-light: #A36A4F;
+    --background-color-light: #F2F2F2;
+    --background-color-suave: #ECDAC4;
     --border-color: #D5D5D5;
     --border-color-dark: #303030;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Work Sans', sans-serif;
+    --font-Times: 'Times New Roman', italic;
 }
 
 * {
@@ -19,7 +22,76 @@
 
 body {
     font-family: var(--font-body);
-    background-color: var(--background-color);
+    background-image: url(src/src1/img/Frame1/fondo.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     color: var(--text-color);
     line-height: 1.6;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 6%;
+    gap: 10%;
+}
+
+.cuadro h1 {
+    margin-top: 6rem;
+    font-size: 64px;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.cuadro p {
+    font-size: 24px;
+    margin-bottom: 2rem;
+}
+
+.explore-btn {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+    padding: 15px 50px;
+    border: none;
+    border-radius: 36px;
+    font-size: 24px;
+    margin-bottom: 5rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    position: absolute;
+    top: 95%;
+    left: 15%;
+}
+
+.card {
+    background-color: var(--background-color-light);
+    border: 2px solid var(--background-color);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    width: 240px;
+    height: 210px;
+}
+
+.list .card {
+    display: flex;
+    gap: 10px;
+}
+
+.list .card img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.3rem;
+}
+
+.list .card p {
+    font-size: 16px;
 }
