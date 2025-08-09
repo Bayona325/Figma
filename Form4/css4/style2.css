@@ -1,14 +1,17 @@
 :root {
-    --text-color: #303030;
+    --text-color: #252525;
     --text-color-light: #FFFFFF;
-    --background-color: #828282;
-    --background-color-dark: #3b6540;
-    --background-color-yellow: #FFDD81;
-    --background-color-light: #47787a;
+    --background-color: #FFFFFF;
+    --background-color-dark: #252525;
+    --background-color-brow: #363032;
+    --background-color-brow-light: #A36A4F;
+    --background-color-light: #F2F2F2;
+    --background-color-suave: #ECDAC4;
     --border-color: #D5D5D5;
     --border-color-dark: #303030;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Work Sans', sans-serif;
+    --font-Times: 'Times New Roman', italic;
 }
 
 * {
