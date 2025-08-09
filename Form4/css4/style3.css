@@ -1,14 +1,16 @@
 :root {
-    --text-color: #303030;
+    --text-color: #333333;
     --text-color-light: #FFFFFF;
-    --background-color: #828282;
-    --background-color-dark: #3b6540;
-    --background-color-yellow: #FFDD81;
-    --background-color-light: #47787a;
+    --background-color: #FDFEFF;
+    --background-color-dark: #252525;
+    --background-color-yellow: #F8D046;
+    --background-color-light: #F2F2F2;
+    --background-color-suave: #ECDAC4;
     --border-color: #D5D5D5;
-    --border-color-dark: #303030;
+    --border-color-dark: #100201;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Work Sans', sans-serif;
+    --font-Times: 'Times New Roman', italic;
 }
 
 * {
@@ -22,4 +24,89 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+    padding: 5%;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.text {
+    padding: 2rem 5rem;
+}
+
+.text h1 {
+    font-size: 64px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.text p {
+    font-size: 24px;
+    margin-bottom: 2rem;
+}
+
+.explore-btn {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+    padding: 18px 50px;
+    border: none;
+    border-radius: 36px;
+    font-size: 24px;
+    margin-bottom: 5rem;
+}
+
+.imagens {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.left img, .right img {
+    border: 0.5px solid var(--border-color-dark);
+    border-radius: 40px;
+}
+
+.left {
+    margin-bottom: 5rem;
+}
+
+.right {
+    margin-top: 5rem;
+}
+
+.list1, .list2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.list2 {
+    border: 1px solid var(--border-color-dark);
+    border-radius: 32px;
+    padding-top: 2.5rem;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+
+.list2 h2 {
+    font-size: 22px;
+    margin-bottom: 0.5rem;
+}
+
+.list2 p {
+    font-size: 18px;
 }
