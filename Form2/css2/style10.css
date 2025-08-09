@@ -1,14 +1,17 @@
 :root {
-    --text-color: #303030;
+    --text-color: #252525;
     --text-color-light: #FFFFFF;
-    --background-color: #828282;
-    --background-color-dark: #3b6540;
-    --background-color-yellow: #FFDD81;
-    --background-color-light: #47787a;
+    --background-color: #FFFFFF;
+    --background-color-dark: #252525;
+    --background-color-brow: #363032;
+    --background-color-brow-light: #A36A4F;
+    --background-color-light: #F2F2F2;
+    --background-color-suave: #ECDAC4;
     --border-color: #D5D5D5;
     --border-color-dark: #303030;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Work Sans', sans-serif;
+    --font-Times: 'Times New Roman', italic;
 }
 
 * {
@@ -22,4 +25,102 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+}
+
+.cuadro {
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 15%;
+    margin-bottom: 1%;
+}
+
+.text {
+    margin: auto;
+}
+
+.text h1 {
+    font-size: 64px;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.text p {
+    font-size: 24px;
+    margin-bottom: 1.8rem;
+}
+
+.explore-btn {
+    background-color: var(--background-color-brow-light);
+    color: var(--text-color-light);
+    padding: 15px 50px;
+    border: none;
+    border-radius: 36px;
+    font-size: 24px;
+}
+
+.list {
+    background-color: var(--background-color-suave);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 5rem;
+    border-radius: 80px;
+    width: 878px;
+    height: 188px;
+    position: absolute;
+    top: 80%;
+    left: 25%;
+}
+
+.list .card1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.list .card1 img {
+    width: 36px;
+    height: 36px;
+    /* Estos márgenes automáticos ayudarán al centrado si flexbox no se usa */
+    margin: 0 auto;
+    display: block;
+}
+
+.list .card1 h2 {
+    font-size: 32px;
+}
+
+.list .card1 p {
+    font-size: 16px;
+}
+
+.list-coffe {
+    background-color: var(--background-color-brow);
+    color: var(--text-color-light);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 5rem;
+    padding-top: 8rem;
+    text-align: center;
+}
+
+.card, .card1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card img {
+    width: 186px;
+    height: 246px;
+    border-radius: 16px;
 }
