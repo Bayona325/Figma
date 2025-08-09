@@ -1,10 +1,10 @@
 :root {
     --text-color: #303030;
     --text-color-light: #FFFFFF;
-    --background-color: #828282;
-    --background-color-dark: #3b6540;
+    --background-color: #F2F2F2;
+    --background-color-dark: #252525;
     --background-color-yellow: #FFDD81;
-    --background-color-light: #47787a;
+    --background-color-light: #FFFFFF;
     --border-color: #D5D5D5;
     --border-color-dark: #303030;
     --font-heading: 'Playfair Display', serif;
@@ -22,4 +22,63 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8%;
+}
+
+.text {
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 56px;
+    padding-bottom: 3%;
+}
+
+.text p {
+    font-size: 24px;
+    padding-bottom: 3%;
+}
+
+.explore-btn {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+    padding: 15px 50px;
+    border: none;
+    border-radius: 36px;
+    font-size: 24px;
+    margin-bottom: 10rem;
+}
+
+.list {
+    background-color: var(--background-color-light);
+    border-radius: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem 6rem;
+    width: 70%;
+    height: 25%;
+    position: absolute;
+    top: 65%;
+    left: 15%;
+}
+
+.imagens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
