@@ -1,14 +1,16 @@
 :root {
-    --text-color: #303030;
+    --text-color: #333333;
     --text-color-light: #FFFFFF;
-    --background-color: #828282;
-    --background-color-dark: #3b6540;
-    --background-color-yellow: #FFDD81;
-    --background-color-light: #47787a;
+    --background-color: #FDFEFF;
+    --background-color-dark: #111111;
+    --background-color-yellow: #F8D046;
+    --background-color-light: #F2F2F2;
+    --background-color-suave: #ECDAC4;
     --border-color: #D5D5D5;
-    --border-color-dark: #303030;
+    --border-color-dark: #100201;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Work Sans', sans-serif;
+    --font-Times: 'Times New Roman', italic;
 }
 
 * {
@@ -19,7 +21,66 @@
 
 body {
     font-family: var(--font-body);
-    background-color: var(--background-color);
+    background-color: var(--background-color-dark);
     color: var(--text-color);
+    position: relative;
     line-height: 1.6;
+}
+
+.fondo {
+    position: fixed; /* o absolute dependiendo de tus necesidades */
+    background-color: var(--background-color); /* Usa el color que prefieras */
+    z-index: -1; /* Esto lo coloca detrás de todo */
+}
+
+.conteiner {
+    position: relative;
+    color: var(--text-color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
+    padding-top: 10rem;
+}
+
+.text {
+    z-index: 2;
+}
+
+.text h1 {
+    font-size: 64px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.text p {
+    font-size: 24px;
+    margin-bottom: 2rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 2;
+}
+
+.cuart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    background-image: url('src/src6/img/Frame1/Card.svg');
+    border-radius: 24px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
 }
