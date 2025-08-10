@@ -1,14 +1,15 @@
 :root {
-    --text-color: #303030;
+    --text-color: #333333;
     --text-color-light: #FFFFFF;
-    --background-color: #828282;
-    --background-color-dark: #3b6540;
-    --background-color-yellow: #FFDD81;
-    --background-color-light: #47787a;
+    --background-color: #FDFEFF;
+    --background-color-dark: #111111;
+    --background-color-light: #F2F2F2;
+    --background-color-suave: #ECDAC4;
     --border-color: #D5D5D5;
-    --border-color-dark: #303030;
+    --border-color-dark: #100201;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Work Sans', sans-serif;
+    --font-Times: 'Times New Roman', italic;
 }
 
 * {
