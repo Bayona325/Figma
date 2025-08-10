@@ -22,6 +22,8 @@
 body {
     font-family: var(--font-body);
     background-image: url('src/src6/img/Frame1/Fondo1.svg');
+    background-size: cover;
+    background-position: center;
     color: var(--text-color);
     line-height: 1.6;
 }
