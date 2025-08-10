@@ -5,8 +5,6 @@
     --background-color-dark: #111111;
     --background-color-light: #F2F2F2;
     --background-color-suave: #ECDAC4;
-    --bg-start:#ffd789;   /* dorado claro */
-    --bg-end:#efb04f;     /* dorado medio */
     --border-color: #D5D5D5;
     --border-color-dark: #100201;
     --font-heading: 'Playfair Display', serif;
@@ -14,10 +12,11 @@
     --font-Times: 'Times New Roman', italic;
 }
 
-/* Reset básico */
+
 * {
-    box-sizing:border-box;
-    margin:0; padding:0; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 img {
@@ -25,63 +24,9 @@ img {
     max-width:100%;
 }
 
-/* Fondo */
 body{
-    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    color:var(--ink);
-    /* background-image: url('src/src8/img/Frame2/fondo.svg'); */
-    background:
-        radial-gradient(1200px 800px at 70% 10%, rgba(255,255,255,.35), transparent 60%),
-        linear-gradient(160deg, var(--bg-start), var(--bg-end));
-    min-height:100svh;
-}
-
-.container {
-    padding: 5%;
-    display: flex;
-    flex-direction: row;
-}
-
-.text-content {
-    display: flex;
-    flex-direction: column;
-    width: 700px;
-    height: 230px;
-}
-
-.text-content {
-    padding-right: 5rem;
-}
-
-.text-content img {
-    margin-bottom: 3rem;
-    width: 130.38px;
-    height: 130.38px;
-}
-
-.text-content h1 {
-    font-size: 72px;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-.text-content p {
-    font-size: 24px;
-    margin-bottom: 2rem;
-}
-
-.explore-btn {
-    background-color: var(--background-color-dark);
-    color: var(--text-color-light);
-    padding: 18px 50px;
-    border: none;
-    border-radius: 36px;
-    font-size: 24px;
-    margin-bottom: 5rem;
-    width: 250px;
-}
-
-.imagen {
-    position: relative;
-    z-index: -1;
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
