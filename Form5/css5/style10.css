@@ -1,25 +1,257 @@
 :root {
-    --text-color: #303030;
-    --text-color-light: #FFFFFF;
-    --background-color: #828282;
-    --background-color-dark: #3b6540;
-    --background-color-yellow: #FFDD81;
-    --background-color-light: #47787a;
-    --border-color: #D5D5D5;
-    --border-color-dark: #303030;
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Work Sans', sans-serif;
+    --ink: #222;
+    --muted: #5f5f5f;
+    --btn: #1f1f1f;
+    --white: #fff;
+    --shadow: 0 10px 30px rgba(0, 0, 0, .12);
+    --text: #1a1a1a;
+    --title: #222;
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
 }
 
 body {
-    font-family: var(--font-body);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
+    font-family: 'Work Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background:
+        linear-gradient(180deg, #cfe3ee 0%, #ffe0a9 100%);
+    line-height: 1.5;
+}
+
+/* ===== LAYOUT GENERAL ===== */
+.conteiner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 42px 24px 48px;
+}
+
+/* ===== HERO TEXT ===== */
+.text {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.text h1 {
+    font-weight: 800;
+    font-size: clamp(28px, 4.2vw, 44px);
+    line-height: 1.2;
+    letter-spacing: .2px;
+    margin-bottom: 14px;
+}
+
+.text p {
+    color: var(--muted);
+    max-width: 78ch;
+    margin: 0 auto 18px;
+}
+
+.explore-btn {
+    display: inline-block;
+    background: var(--btn);
+    color: #fff;
+    border: 0;
+    border-radius: 999px;
+    padding: 14px 26px;
+    font-weight: 600;
+    box-shadow: 0 8px 0 #00000033;
+    cursor: pointer;
+}
+
+.explore-btn:active {
+    transform: translateY(1px)
+}
+
+/* ===== MOSAICO ===== */
+.list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 180px;
+    /* alto base de fila */
+    gap: 22px;
+    margin-top: 18px;
+}
+
+/* Carta base */
+.card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #f6f6f6;
+    box-shadow: var(--shadow);
+}
+
+.card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* velo inferior para legibilidad del texto */
+.card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 55%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .45) 100%);
+    pointer-events: none;
+    opacity: .85;
+}
+
+/* textos dentro de las cards */
+.card p,
+.card h2 {
+    position: relative;
+    z-index: 2;
+    color: var(--text);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+    font-weight: 600;
+}
+
+/* —— Ubicaciones (como el mock) —— */
+.list .card:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.list .card:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.list .card:nth-child(3) {
+    grid-column: 3/5;
+    grid-row: 1/3;
+}
+
+/* grande 2×2 */
+.list .card:nth-child(4) {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
+/* ancho abajo izq */
+.list .card:nth-child(5) {
+    grid-column: 5/6;
+    grid-row: 1/2;
+}
+
+.list .card:nth-child(6) {
+    grid-column: 5/6;
+    grid-row: 2/3;
+}
+
+/* —— Copy overlay en cada card —— */
+.card p {
+    position: absolute;
+    left: 14px;
+    bottom: 12px;
+    font-size: 14px;
+}
+
+/* borde punteado azul de la segunda */
+.list .card:nth-child(2) p {
+    border-radius: 6px;
+    padding: 8px 10px;
+    text-shadow: none;
+}
+
+/* Títulos posicionados (Title 1 / Title 2) */
+.list .card:nth-child(3)::after {
+    height: 30%
+}
+
+/* menos velo para la grande */
+.list .card:nth-child(3) h2 {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    font-size: 24px;
+    text-shadow: none;
+    color: var(--title);
+}
+
+.list .card:nth-child(4)::after {
+    height: 22%
+}
+
+.list .card:nth-child(4) h2 {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    font-size: 22px;
+    text-shadow: none;
+    color: var(--title);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 980px) {
+    .list {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 160px;
+    }
+
+    /* Remapeo suave para 4 cols */
+    .list .card:nth-child(1) {
+        grid-column: 1/2;
+        grid-row: 1/2
+    }
+
+    .list .card:nth-child(2) {
+        grid-column: 2/3;
+        grid-row: 1/2
+    }
+
+    .list .card:nth-child(3) {
+        grid-column: 3/5;
+        grid-row: 1/3
+    }
+
+    .list .card:nth-child(4) {
+        grid-column: 1/3;
+        grid-row: 2/3
+    }
+
+    .list .card:nth-child(5) {
+        grid-column: 4/5;
+        grid-row: 1/2
+    }
+
+    .list .card:nth-child(6) {
+        grid-column: 4/5;
+        grid-row: 2/3
+    }
+}
+
+@media (max-width: 640px) {
+    .text p {
+        padding: 0 6px
+    }
+
+    .list {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 200px;
+    }
+
+    .list .card {
+        grid-column: auto;
+        grid-row: auto
+    }
+
+    .list .card:nth-child(3) {
+        grid-auto-rows: unset;
+        height: 320px
+    }
 }
