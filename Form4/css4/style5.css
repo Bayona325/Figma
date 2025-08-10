@@ -1,14 +1,18 @@
 :root {
-    --text-color: #303030;
+    --text-color: #333333;
     --text-color-light: #FFFFFF;
-    --background-color: #828282;
-    --background-color-dark: #3b6540;
-    --background-color-yellow: #FFDD81;
-    --background-color-light: #47787a;
+    --background-color: #FDFEFF;
+    --background-color-dark: #202020;
+    --background-color-dark2: #333333;
+    --background-color-yellow: #F8D046;
+    --background-color-light: #F2F2F2;
+    --background-color-suave: #ECDAC4;
     --border-color: #D5D5D5;
-    --border-color-dark: #303030;
+    --border-color-dark: #100201;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Work Sans', sans-serif;
+    --font-Times: 'Times New Roman', italic;
+    --translate: translate(9%, -38%);
 }
 
 * {
@@ -22,4 +26,77 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+    padding: 5%;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.left h1 {
+    font-size: 56px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.left p {
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+}
+
+.explore-btn {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+    padding: 18px 50px;
+    border: none;
+    border-radius: 36px;
+    font-size: 24px;
+    margin-bottom: 5rem;
+}
+
+.borde {
+    border: 1px solid var(--border-color-dark);
+    margin-bottom: 4rem;
+}
+
+.card {
+    background-color: var(--background-color-dark2);
+    border: 1.5rem solid var(--background-color-light);
+    color: var(--text-color-light);
+    padding: 4%;
+    font-style: italic;
+    padding-bottom: 0.3%;
+}
+
+.card p {
+    font-size: 15px;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 1.3rem;
+}
+
+.stroke {
+    width: 670px;
+    height: 850px;
+    z-index: 1;
+    position: relative;
+}
+
+.imagen {
+    position: absolute;
+    width: 520px;
+    height: 700px;
+    top: 50%;
+    left: 50%;
+    transform: var(--translate);
+    z-index: 2;
+    border-radius: 52px;
 }
