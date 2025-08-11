@@ -1,23 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Work+Sans:wght@300;400;500&display=swap");
+
 :root {
-    --text-color: #252525;
-    --text-color-gray1: #252525b4;
-    --text-color-gray2: #2525258b;
-    --text-color-light: #FFFFFF;
-    --background-color: #ffffff;
-    --background-color-dark: #252525;
+    --text: #252525;
+    --text-70: #252525b4;
+    --text-55: #2525258b;
+    --white: #ffffff;
+    --black: #111;
+    --radius: 22px;
+    --shadow: 0 10px 30px rgba(0, 0, 0, .12);
+
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Work Sans', sans-serif;
 }
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
+img {
+    max-width: 100%;
+    display: block
+}
+
+/* Mantengo el fondo ya puesto */
 body {
     font-family: var(--font-body);
-    background-color: var(--background-color);
-    color: var(--text-color);
+    color: var(--text);
     line-height: 1.6;
+    background-image: url('src/src4/img/Frame1/fondo.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ====== Layout general ====== */
+.conteiner {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 12px 22px;
+    display: grid;
+    grid-template-columns: 0.95fr 1.2fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+/* ====== Panel izquierdo ====== */
+.left {
+    margin-top: 7rem;
+    position: relative;
+    background: rgba(255, 255, 255, .60);
+    border: 1.5px solid rgba(0, 0, 0, .35);
+    border-radius: var(--radius);
+    padding: 36px 32px 28px;
+    padding-right: 5px;
+    box-shadow: var(--shadow);
+}
+
+/* Texto del panel */
+.left>p {
+    padding-top: 3rem;
+    max-width: 380px;
+    font-size: 15px;
+    color: var(--text-70);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bloque de KPIs */
+.left .list {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    padding: 0rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+    justify-items: center;
+    align-content: center;
+    row-gap: 2rem;
+}
+
+/* Haz match aunque no sea hijo directo */
+.left img {
+    position: absolute;
+    top: -330px;
+    left: 90px;
+    width: 118px;
+    height: 118px;
+    z-index: 5;
+    pointer-events: none;
+    user-select: none;
+}
+
+.left .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: max-content;          /* se ajusta al contenido real */
+    margin-inline: auto;         /* centrado perfecto dentro de .list */
+    column-gap: 56px;
+}
+
+.left .card1 h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.1;
+}
+
+/* ====== Columna derecha ====== */
+.right {
+    margin-top: 3rem;
+}
+
+.right h1 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.1;
+    letter-spacing: .2px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    white-space: nowrap;         /* no hace wrap */
+    overflow: visible;           /* deja que se extienda si hay espacio */
+    word-break: keep-all;
+}
+
+.right p {
+    max-width: 570px;
+    font-size: 24px;
+    color: var(--text-70);
+    margin-bottom: 28px;
+    white-space: nowrap;
+    overflow: visible;
+    word-break: keep-all;
+}
+
+/* Botón CTA */
+.explore-btn {
+    appearance: none;
+    border: 0;
+    background: #0f172a;
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+    transition: transform .06s ease, box-shadow .2s ease;
+}
+
+.explore-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .22);
+}
+
+.explore-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 1080px) {
+    .conteiner {
+        grid-template-columns: 1fr;
+        gap: 28px
+    }
+
+    .left .list>img {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }

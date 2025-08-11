@@ -2,141 +2,172 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Work+Sans:wght@300;400;500&display=swap");
 
 /* ===== Variables y básicos ===== */
-:root{
-  --text: #252525;
-  --text-70: #252525b4;
-  --text-55: #2525258b;
-  --bg: #ffffff;
-  --radius: 14px;
-  --shadow: 0 4px 24px rgba(0,0,0,.08);
+:root {
+    --text: #252525;
+    --text-70: #252525b4;
+    --text-55: #2525258b;
+    --bg: #ffffff;
+    --radius: 14px;
+    --shadow: 0 4px 24px rgba(0, 0, 0, .08);
 
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Work Sans', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Work Sans', sans-serif;
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
-img{max-width:100%;display:block}
-body{
-  font-family:var(--font-body);
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+img {
+    max-width: 100%;
+    display: block
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
 }
 
 /* ===== Layout general ===== */
-.conteiner{
-  max-width: 1280px;
-  margin: 32px auto;
-  padding: 16px 24px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;   /* Columna izquierda + bloque derecho */
-  column-gap: 44px;
-  align-items: start;
+.conteiner {
+    max-width: 1280px;
+    margin: 32px auto;
+    padding: 16px 24px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* Columna izquierda + bloque derecho */
+    column-gap: 44px;
+    align-items: start;
 }
 
 /* ===== Columna izquierda ===== */
-.left{
-  position: relative;
+.left {
+    position: relative;
 }
 
 /* 1er <img> dentro de .left = sello circular */
-.left > img:first-of-type{
-  position: absolute;
-  top: -8px;              /* “pegado” al borde superior */
-  left: 210px;            /* ajústalo si lo necesitas */
-  width: 82px;
-  height: auto;
-  pointer-events: none;
-  user-select: none;
+.left>img:first-of-type {
+    position: absolute;
+    top: -8px;
+    /* “pegado” al borde superior */
+    left: 210px;
+    /* ajústalo si lo necesitas */
+    width: 82px;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
 }
 
 /* Título grande */
-.left h1{
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: clamp(40px, 6vw, 64px);
-  line-height: 1.06;
-  letter-spacing: -0.3px;
-  margin-bottom: 28px;
+.left h1 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.06;
+    letter-spacing: -0.3px;
+    margin-bottom: 28px;
 }
 
 /* 2do <img> dentro de .left = miniatura inferior */
-.left > img:nth-of-type(2){
-  width: 100%;
-  max-width: 270px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  margin: 8px 0 16px;
+.left>img:nth-of-type(2) {
+    width: 100%;
+    max-width: 270px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 8px 0 16px;
 }
 
 /* Párrafo inferior izquierda */
-.left p{
-  max-width: 300px;
-  font-size: 14.5px;
-  color: var(--text-70);
+.left p {
+    max-width: 300px;
+    font-size: 14.5px;
+    color: var(--text-70);
 }
 
 /* ===== Bloque derecho (título + lista de tarjetas) ===== */
-.right{
-  position: relative;
+.right {
+    position: relative;
 }
 
 /* Si tu HTML tiene un <h1> aquí (texto distinto al layout), lo ocultamos visualmente */
-.right > h1{
-  position:absolute !important;
-  width:1px;height:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);
+.right>h1 {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
 }
 
 /* Grid de dos tarjetas lado a lado */
-.right .list{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 36px;
+.right .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
 }
 
 /* ===== Tarjeta ===== */
-.card .top h2{
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--text-55);
-  margin-bottom: 10px;
+.card .top h2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-55);
+    margin-bottom: 10px;
 }
 
-.card .top img{
-  width: 100%;
-  aspect-ratio: 4/5;      /* similar al mockup vertical */
-  object-fit: cover;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+.card .top img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    /* similar al mockup vertical */
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 /* Número grande + párrafo */
-.card .bottom{
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 16px 18px;
-  align-items: start;
-  margin-top: 14px;
+.card .bottom {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px 18px;
+    align-items: start;
+    margin-top: 14px;
 }
 
-.card .bottom h3{
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1;
-  color: var(--text-55);
+.card .bottom h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1;
+    color: var(--text-55);
 }
 
-.card .bottom p{
-  font-size: 14.5px;
-  color: var(--text-70);
-  max-width: 360px;
+.card .bottom p {
+    font-size: 14.5px;
+    color: var(--text-70);
+    max-width: 360px;
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 1100px){
-  .conteiner{grid-template-columns: 1fr; gap: 28px}
-  .right .list{grid-template-columns: 1fr; gap: 24px}
-  .left > img:first-of-type{left:auto; right:10px} /* reubica sello en móvil */
-  .left p{max-width: 100%}
+@media (max-width: 1100px) {
+    .conteiner {
+        grid-template-columns: 1fr;
+        gap: 28px
+    }
+
+    .right .list {
+        grid-template-columns: 1fr;
+        gap: 24px
+    }
+
+    .left>img:first-of-type {
+        left: auto;
+        right: 10px
+    }
+
+    /* reubica sello en móvil */
+    .left p {
+        max-width: 100%
+    }
 }
