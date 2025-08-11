@@ -1,10 +1,13 @@
+/* Tipografías (solo CSS; no toca el HTML) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Work+Sans:wght@400;500;600&display=swap');
+
 :root {
     --text-color: #252525;
-    --text-color-gray1: #252525b4;
+    --text-color-gray1: #0C0C0C;
     --text-color-gray2: #2525258b;
-    --text-color-light: #FFFFFF;
-    --background-color: #ffffff;
-    --background-color-dark: #252525;
+    --text-color-light: #E9E9E9;
+    --background-light: #f1f1f1;
+    --background-dark: #0f0f0f;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Work Sans', sans-serif;
 }
@@ -15,9 +18,170 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: var(--font-body);
-    background-color: var(--background-color);
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.5;
+    background-image: url('src/src5/img/Frame1/fondo.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ---------- LAYOUT PRINCIPAL ---------- */
+.conteiner {
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Columna izquierda (fondo claro) */
+.left {
+    flex: 1.05;
+    /* un poco más ancha que la derecha */
+    /* background: var(--background-light); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(24px, 5vw, 64px);
+    gap: 20px;
+}
+
+.left h1 {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.5px;
+    color: var(--text-color-gray1);
+    font-size: 80px;
+}
+
+.left p {
+    max-width: 520px;
+    color: #454545;
+    font-size: 24px;
+}
+
+.explore-btn {
+    width: fit-content;
+    border: 0;
+    border-radius: 999px;
+    padding: 14px 28px;
+    background: var(--background-dark);
+    color: var(--text-color-light);
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .15s ease, opacity .15s ease;
+}
+
+.explore-btn:hover {
+    transform: translateY(-1px);
+    opacity: .95;
+}
+
+/* Columna derecha (fondo oscuro) */
+.right {
+    margin-left: 15rem;
+    flex: 0.95;
+    /* background: var(--background-dark); */
+    color: var(--text-color-light);
+    display: flex;
+    align-items: center;
+    /* centra verticalmente la lista */
+    justify-content: center;
+    /* centra horizontalmente la lista */
+    padding: clamp(20px, 4vw, 48px);
+}
+
+/* Lista de cards apiladas */
+.list {
+    width: min(560px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(28px, 6vh, 72px);
+}
+
+/* Cada card: número a la izquierda, imagen+texto a la derecha */
+.card {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(16px, 3vw, 28px);
+}
+
+.card h2 {
+    flex: 0 0 80px;
+    /* columna fija para el número */
+    text-align: right;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 800;
+    line-height: 1;
+    margin-top: 6px;
+    /* lo baja un poquito respecto a la imagen */
+    color: var(--text-color-light);
+    opacity: 0.95;
+}
+
+/* Bloque imagen + descripción */
+.card1 {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 420px;
+}
+
+.card1 img {
+    width: 100%;
+    aspect-ratio: 1.25 / 1;
+    /* mantiene proporción similar a la maqueta */
+    object-fit: cover;
+    display: block;
+    border: 0;
+}
+
+.card1 p {
+    color: var(--text-color-light);
+    font-size: 21px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 980px) {
+    .conteiner {
+        flex-direction: column;
+    }
+
+    .right {
+        padding-top: 32px;
+        padding-bottom: 48px;
+    }
+
+    .card h2 {
+        flex-basis: 64px;
+    }
+}
+
+@media (max-width: 540px) {
+    .left {
+        padding: 28px 20px;
+    }
+
+    .right {
+        padding: 24px 18px 40px;
+    }
+
+    .card {
+        gap: 14px;
+    }
+
+    .card h2 {
+        flex-basis: 56px;
+        text-align: left;
+        order: -1;
+        /* opcional: pone el número arriba en móviles */
+    }
 }
